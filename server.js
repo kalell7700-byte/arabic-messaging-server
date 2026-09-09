@@ -102,6 +102,6 @@ io.on('connection', socket => {
     } catch { cb({ ok:false, error:'تعذر إرسال الرسالة' }); }
   });
   socket.on('disconnect', () => { if (online.get(socket.user.id) === socket.id) online.delete(socket.user.id); });
-}):
+});
 
 server.listen(PORT, '0.0.0.0', () => console.log(`Messaging server running on port ${PORT}`));
