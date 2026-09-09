@@ -103,4 +103,5 @@ io.on('connection', socket => {
   });
   socket.on('disconnect', () => { if (online.get(socket.user.id) === socket.id) online.delete(socket.user.id); });
 });
-server.listen(PORT, () => console.log(`Messaging server running on port ${PORT}`));
+
+server.listen(PORT, '0.0.0.0', () => console.log(`Messaging server running on port ${PORT}`));
