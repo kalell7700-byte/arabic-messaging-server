@@ -1,20 +1,14 @@
-# استخدام بيئة تشغيل Node.js رسمية
 FROM node:18-alpine
 
-# إنشاء مجلد العمل داخل الحاوية
 WORKDIR /app
 
-# نسخ ملفات اعتماد المشروع
 COPY package*.json ./
 
-# تثبيت الحزم المطلوبة
 RUN npm install
 
-# نسخ باقي ملفات المشروع
 COPY . .
 
-# المنفذ الذي يستمع عليه السيرفر
-EXPOSE 3000
+ENV PORT=8080
+EXPOSE 8080
 
-# أمر تشغيل التطبيق
 CMD ["npm", "start"]
