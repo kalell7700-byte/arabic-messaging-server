@@ -9,7 +9,7 @@ import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import fs from 'fs';
 
-const PORT = Number(process.env.PORT || 3000);
+const PORT = Number(process.env.PORT || 8080);
 const JWT_SECRET =
   process.env.JWT_SECRET || 'CHANGE_ME_IN_PRODUCTION';
 
