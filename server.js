@@ -10,9 +10,6 @@ import { open } from 'sqlite';
 import fs from 'fs';
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
 
 const JWT_SECRET =
   process.env.JWT_SECRET || 'CHANGE_ME_IN_PRODUCTION';
